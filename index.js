@@ -10,7 +10,8 @@ const handlebars = require('express-handlebars')
 app.use(express.static('public'))
 
 app.get('/',(req,res,next) => {
-    res.render('menu')
+    res.sendFile(__dirname+"/teste.html")
+    
 })
 
 app.listen(3000)
