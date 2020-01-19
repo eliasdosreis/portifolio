@@ -17,9 +17,12 @@ var options = {
     cert : fs.readFileSync('cert.pem')
 };
 
+
 app.get('/',(req,res,next) => {
     res.sendFile(__dirname+"/index.html")   
 })
+
+app.listen(3001)
 
 // https.createServer(app).listen(8082)
 
