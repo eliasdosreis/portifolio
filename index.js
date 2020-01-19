@@ -11,21 +11,10 @@ const app = express()
 
 app.use(express.static('public'))
 
-
-// var options = {
-//     key : fs.readFileSync('certificate.key'),
-//     cert : fs.readFileSync('certificate.crt')
-// };
-
-
 app.get('/',(req,res,next) => {
     res.sendFile(__dirname+"/index.html")   
 })
 
 app.listen(3000)
 
-// https.createServer(app).listen(8082)
 
-// https.createServer(options,app).listen(3000,() => {
-//     console.log('HTTPS listening on 3000')
-// })
