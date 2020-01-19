@@ -3,6 +3,7 @@
 body{width: 100%;}
 #bar{display: none;}
 
+header{position: fixed;top: 0;width: 100%;z-index: 1;}
 .barra{width: 100%; background-color: #181A1C; width: 100%; height: 80px;display: flex;justify-content: space-between;box-sizing: content-box;border-bottom:#0984e3 4px solid ;}
 .logo{ color: #fff;padding: 15px; display: flex;}
 .logo-texto{cursor: pointer; padding: 15px; font-size: 1.5em;font-family: 'Dancing Script', cursive;color: #FFF; font-weight: 900;}
@@ -14,8 +15,8 @@ ul a:hover{border: solid#0984e3; padding:10px;border-radius: 5px;background-colo
 
 /*------------------------- Primeira seçao banner de apresentação ------------------------------------*/
 
-.banner{background-color: #dfe6e9;width: 100%; height: 800px;position: absolute;}
-.project-title {color:#3498db;font-size: 50px;margin: 40px 0;text-align: center;text-transform: uppercase;font-family: Helvetica, sans-serif;text-shadow: 1px 2px #2980b9;}
+.banner{background-color: #dfe6e9;width: 100%; height: 800px;margin-top: 80px;}
+.project-title {color:#3498db;font-size: 50px;margin: 40px 0;text-align: center;text-transform: uppercase;font-family: Helvetica, sans-serif;text-shadow: 1px 2px #2980b9;padding-top: 30px;}
 .slider { background: skyblue;height: 500px; position: relative;text-align: center;width: 100%;align-items: center;}
 .arrow { background: #fff;border: none;border-radius: 10%;color: #333;cursor: pointer;display: none;opacity: .4;padding: 20px;padding-left: 10px;position: absolute;text-transform: uppercase;-webkit-transition: .2s;top: 50%;transition: .2s; }
 .arrow:hover { opacity: .8; }.arrow.next { right: 2%}
@@ -54,111 +55,21 @@ ul a:hover{border: solid#0984e3; padding:10px;border-radius: 5px;background-colo
     .slide-desc {font-size: 1.4em;margin: 40px auto 0;width: 65%;text-shadow: 2px 1px #333;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 
     .slide-title {color: #fff;font-weight: bold;margin: 0 auto;padding: 15px 0;text-transform: uppercase;text-shadow: 2px 2px #333;font-size: 3em;   }
+
 }
 
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
-
-.title-sobre{color: #fff; font-size: 4em; background-color:#0984e3; width: 100%; margin-top: 800px;height: 80px;position: absolute;text-align: center;display: flex;align-items: center;justify-content: center;font-family: Helvetica, sans-serif;}
-.sobre-mim{background-color: #0984e3; display: flex;margin-top: 850px;justify-content: space-around;flex-wrap: wrap; width: 100%; height: 500px;}
-.sobre-mim img{margin-top: 80px; width: 320px; height: 250px; box-shadow: 1px 1px 5px 1px;border-radius: 15px;overflow: hidden;}
-
-.wrap { margin: 50px 60px;}
+.sobre-min{width: 100%;  display: flex;flex-direction: column;justify-content: center;background-color: skyblue;}
+.sobre-min p,h1{text-align: center; font-size: 4em;padding-bottom: 30px;}
+.sobre-min p,h2{text-align: center; font-size: 2em; padding-bottom: 20px;}
+.sobre-min p,h3{text-align: center; font-size: 2.5em;padding-top: 20px; padding-bottom: 20px;}
+.sobre-min h1,p{font-size: 20px;padding: 0 50px; margin-bottom: 10px;}
+.skill-bars{display: flex;justify-content: space-around;width: 100%;flex-wrap: wrap;}
 
 
-ul.tabs {width: 390px;height: 80px;margin: 0 auto;list-style: none;overflow: hidden;padding: 0;}
-ul.tabs li {	float: left;width: 130px;}
+.borde-bar{border: solid 2px #333; width: 400px;height: 44px; margin: 30px 0; border-radius: 20px; font-weight: 900; z-index: 2; position: relative;}
+.box-bar-html5{z-index: 1; width: 350px; height: 40px;background-color:tomato; border-radius: 20px; padding: 10px;}
+.box-bar-css3{z-index: 1; width: 290px; height: 40px;background-color:tomato; border-radius: 20px; padding: 10px;}
+.box-bar-javascript{z-index: 1; width: 350px; height: 40px;background-color:tomato; border-radius: 20px; padding: 10px;}
+.box-bar-reactjs{z-index: 1; width: 200px; height: 40px;background-color:tomato; border-radius: 20px; padding: 10px;}
+.box-bar-nodejs{z-index: 1; width: 200px; height: 40px;background-color:tomato; border-radius: 20px; padding: 10px;}
 
-ul.tabs li a {
-	position: relative;
-	display: block;
-	height: 50px;
-	margin-top: 40px;
-	padding: 0px 0 0 0;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 18px;
-	text-align: center;	
-	text-decoration: none;
-	color: #ffffff;
-	background: #6edeef;
-	-webkit-box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.4);
-	   -moz-box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.4);
-	        box-shadow: 8px 12px 25px 2px rgba(0,0,0,0.4);
-	        	border: 0px solid #000000;
-	-webkit-transition: padding 0.2s ease, margin 0.2s ease;
-       -moz-transition: padding 0.2s ease, margin 0.2s ease;
-         -o-transition: padding 0.2s ease, margin 0.2s ease;
-        -ms-transition: padding 0.2s ease, margin 0.2s ease;
-            transition: padding 0.2s ease, margin 0.2s ease;
-}
-.tabs li:first-child a {
-	z-index: 3;
-  -webkit-border-top-left-radius: 8px;
--moz-border-radius-topleft: 8px;
-border-top-left-radius: 8px;
-}
-.tabs li:nth-child(2) a {
-	z-index: 2;
-}
-.tabs li:last-child a {
-	z-index: 1;
-  -webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-	   -moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-	        box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-  -webkit-border-top-right-radius: 8px;
--moz-border-radius-topright: 8px;
-border-top-right-radius: 8px;
-}
-ul.tabs li a:hover {
-	margin: 35px 0 0 0;
-	padding: 10px 0 5px 0;
-}
-ul.tabs li a.active {
-	margin: 30px 0 0 0;
-	padding: 10px 0 10px 0;
-	background: #545f60;
-	color: #6edeef;
-	/*color: #ff6831;*/
-	z-index: 4;
-	outline: none;
-}
-.group:before,
-.group:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-.group:after {
-    clear: both;
-}
-#content {
-  width: 390px;
-  height: 200px;
-  margin: 0 auto;
-  background: #545f60;
--webkit-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-   	   -moz-box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-   	        box-shadow: 2px 8px 25px -2px rgba(0,0,0,0.3);
-  -webkit-border-bottom-right-radius: 8px;
--webkit-border-bottom-left-radius: 8px;
--moz-border-radius-bottomright: 8px;
--moz-border-radius-bottomleft: 8px;
-border-bottom-right-radius: 8px;
-border-bottom-left-radius: 8px;
-}
-p{
-  font-family: 'Open Sans', sans-serif;
-  padding: 30px 40px;
-  color: #ffffff;
-  line-height: 26px;
-  font-size: 18px;
-  margin: 0;
-}
-#one {
-  
-}
-#two {
-  
-}
-#three {
-  
-}
