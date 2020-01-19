@@ -1,6 +1,6 @@
 // Slider configuration
 var config = {
-    speed: 3000,
+    speed: 8000,
     auto: true, // true or false
     arrows: true, // true or false
     nav: true, // true or false
