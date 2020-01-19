@@ -13,8 +13,8 @@ app.use(express.static('public'))
 
 
 var options = {
-    key : fs.readFileSync('key.pem'),
-    cert : fs.readFileSync('cert.pem')
+    key : fs.readFileSync('certificate.key'),
+    cert : fs.readFileSync('certificate.crt')
 };
 
 
@@ -22,7 +22,7 @@ app.get('/',(req,res,next) => {
     res.sendFile(__dirname+"/index.html")   
 })
 
-app.listen(3001)
+// app.listen(3001)
 
 // https.createServer(app).listen(8082)
 
