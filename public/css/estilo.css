@@ -92,7 +92,7 @@ ul a:hover{border: solid#0984e3; padding:10px;border-radius: 5px;background-colo
     background-image: url("https://images.pexels.com/photos/163143/sackcloth-sackcloth-textured-laptop-ipad-163143.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
   }
   .slide:last-of-type {
-    background-image: url("https://images.pexels.com/photos/270637/pexels-photo-270637.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-image: url("https://images.pexels.com/photos/839465/pexels-photo-839465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 }
   .active {
     display: block;
