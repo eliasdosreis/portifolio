@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfólio - Elias Dos Reis Lima</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* Estilos Gerais */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
             color: #333;
             scroll-behavior: smooth;
-            background-color: #f7f9fc;
+            background-color: #f0f2f5;
         }
         a {
             text-decoration: none;
@@ -47,26 +53,31 @@
         }
         /* Navegação */
         nav {
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0.9);
             padding: 15px;
             text-align: center;
             position: sticky;
             top: 0;
+            backdrop-filter: blur(10px);
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             z-index: 1000;
         }
         nav a {
             margin: 0 15px;
             color: #2575fc;
-            font-weight: bold;
+            font-weight: 600;
             position: relative;
+            transition: color .3s;
+        }
+        nav a:hover {
+            color: #6a11cb;
         }
         nav a::after {
             content: '';
             display: block;
             width: 0;
             height: 2px;
-            background: #2575fc;
+            background: #6a11cb;
             transition: width .3s;
             position: absolute;
             bottom: -5px;
@@ -78,7 +89,7 @@
         }
         /* Seções */
         section {
-            padding: 60px 10%;
+            padding: 80px 10%;
             max-width: 1200px;
             margin: auto;
         }
@@ -86,24 +97,31 @@
             color: #2575fc;
             margin-bottom: 40px;
             position: relative;
+            font-size: 32px;
+            text-align: center;
         }
         h2::after {
             content: '';
             width: 50px;
             height: 4px;
-            background: #2575fc;
+            background: #6a11cb;
             position: absolute;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%);
             bottom: -10px;
         }
         /* Sobre Mim */
         .about p {
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            text-align: center;
         }
         .about ul {
             list-style: none;
             padding: 0;
+            max-width: 800px;
+            margin: auto;
         }
         .about ul li {
             margin-bottom: 15px;
@@ -113,23 +131,24 @@
         }
         .about ul li::before {
             content: '✔';
-            color: #2575fc;
+            color: #6a11cb;
             font-weight: bold;
             margin-right: 10px;
         }
         /* Cartões */
         .card {
             background-color: #fff;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform .3s;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            transition: transform .3s, box-shadow .3s;
             display: flex;
             align-items: flex-start;
         }
         .card:hover {
             transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
         }
         .card img {
             max-width: 100px;
@@ -137,6 +156,13 @@
         }
         .card h3 {
             margin-top: 0;
+            color: #6a11cb;
+            font-size: 24px;
+        }
+        .card p,
+        .card ul {
+            font-size: 16px;
+            line-height: 1.6;
         }
         .card ul {
             list-style: none;
@@ -148,7 +174,9 @@
             align-items: center;
         }
         .card ul li::before {
-            content: '💼';
+            content: '•';
+            color: #2575fc;
+            font-weight: bold;
             margin-right: 10px;
         }
         /* Footer */
@@ -156,15 +184,20 @@
             background-color: #2575fc;
             color: white;
             text-align: center;
-            padding: 40px 0;
+            padding: 60px 0;
         }
         .contact a {
             color: white;
-            margin: 0 10px;
+            margin: 0 15px;
+            font-size: 24px;
             transition: color .3s;
         }
         .contact a:hover {
             color: #d1e9ff;
+        }
+        .contact p {
+            font-size: 18px;
+            margin-bottom: 20px;
         }
         /* Animações */
         @keyframes fadeInDown {
@@ -203,7 +236,8 @@
             }
             .card {
                 flex-direction: column;
-                align-items: flex-start;
+                align-items: center;
+                text-align: center;
             }
             .card img {
                 margin-bottom: 20px;
@@ -215,7 +249,7 @@
 
 <header>
     <h1>Elias Dos Reis Lima</h1>
-    <p>Analista de Infraestrutura | ( Progress ) CCNA Certificado</p>
+    <p>Analista de Infraestrutura | (Em Progresso) CCNA Certificado</p>
 </header>
 
 <nav>
@@ -300,14 +334,13 @@
         </div>
     </div>
 
- 
 </section>
 
 <section id="educacao" class="education">
     <h2>Educação</h2>
     <div class="card">
         <h3>Certificação CCNA - Cisco</h3>
-        <p><em>2015</em></p>
+        <p><em>Em andamento</em></p>
     </div>
     <div class="card">
         <h3>Bacharel em Ciência da Computação - Universidade Federal</h3>
@@ -317,11 +350,14 @@
 
 <footer id="contato" class="contact">
     <h2>Contato</h2>
-    <p>Email: <a href="mailto:elias_dos_reis@hotmail.com" >Elias Dos Reis Lima</a></p>
-    
+    <p>Email: <a href="mailto:elias_dos_reis@hotmail.com">elias_dos_reis@hotmail.com</a></p>
     <p>
-        <a href="https://www.linkedin.com/in/eliasdosreislima/">LinkedIn</a> | 
-        <a href="https://github.com/eliasdosreis">GitHub</a>
+        <a href="https://www.linkedin.com/in/eliasdosreislima/">
+            <img src="linkedin_icon.png" alt="LinkedIn" width="30">
+        </a>
+        <a href="https://github.com/eliasdosreis">
+            <img src="github_icon.png" alt="GitHub" width="30">
+        </a>
     </p>
 </footer>
 
