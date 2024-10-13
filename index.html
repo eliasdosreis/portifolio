@@ -11,7 +11,7 @@
             padding: 0;
             color: #333;
             scroll-behavior: smooth;
-            background-color: #f0f2f5;
+            background-color: #f7f9fc;
         }
         a {
             text-decoration: none;
@@ -19,7 +19,7 @@
         }
         /* Cabeçalho */
         header {
-            background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
             color: white;
             padding: 100px 0;
             text-align: center;
@@ -57,7 +57,7 @@
         }
         nav a {
             margin: 0 15px;
-            color: #0d6efd;
+            color: #2575fc;
             font-weight: bold;
             position: relative;
         }
@@ -66,7 +66,7 @@
             display: block;
             width: 0;
             height: 2px;
-            background: #0d6efd;
+            background: #2575fc;
             transition: width .3s;
             position: absolute;
             bottom: -5px;
@@ -83,7 +83,7 @@
             margin: auto;
         }
         h2 {
-            color: #0d6efd;
+            color: #2575fc;
             margin-bottom: 40px;
             position: relative;
         }
@@ -91,10 +91,31 @@
             content: '';
             width: 50px;
             height: 4px;
-            background: #0d6efd;
+            background: #2575fc;
             position: absolute;
             left: 0;
             bottom: -10px;
+        }
+        /* Sobre Mim */
+        .about p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .about ul {
+            list-style: none;
+            padding: 0;
+        }
+        .about ul li {
+            margin-bottom: 15px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+        .about ul li::before {
+            content: '✔';
+            color: #2575fc;
+            font-weight: bold;
+            margin-right: 10px;
         }
         /* Cartões */
         .card {
@@ -105,7 +126,7 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             transition: transform .3s;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
         }
         .card:hover {
             transform: translateY(-10px);
@@ -114,9 +135,25 @@
             max-width: 100px;
             margin-right: 30px;
         }
+        .card h3 {
+            margin-top: 0;
+        }
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .card ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .card ul li::before {
+            content: '💼';
+            margin-right: 10px;
+        }
         /* Footer */
         footer {
-            background-color: #0d6efd;
+            background-color: #2575fc;
             color: white;
             text-align: center;
             padding: 40px 0;
@@ -189,9 +226,24 @@
     <a href="#contato">Contato</a>
 </nav>
 
-<section id="sobre">
+<section id="sobre" class="about">
     <h2>Sobre Mim</h2>
-    <p>Sou um analista de infraestrutura dedicado com ampla experiência em redes e sistemas. Com certificação CCNA, tenho habilidades comprovadas em configuração e manutenção de equipamentos Cisco, garantindo o funcionamento otimizado das redes corporativas.</p>
+    <p>👉 Olá e bem-vindo ao meu perfil! Sou um entusiasta de tecnologia com um histórico comprovado de entregar resultados. Minha jornada até agora tem sido guiada por uma busca contínua pela excelência e um desejo de fazer uma diferença significativa.</p>
+    <ul>
+        <li><strong>Fundamentos de Rede:</strong> Sólido entendimento de protocolos, endereçamento IP e segmentação de redes.</li>
+        <li><strong>Configuração de Dispositivos:</strong> Proficiência na configuração de roteadores, switches, VLANs e listas de controle de acesso.</li>
+        <li><strong>Tecnologias Emergentes:</strong> Conhecimento atualizado em SDN, virtualização de redes e automação.</li>
+        <li><strong>Resolução de Problemas:</strong> Habilidade para analisar e solucionar problemas de conectividade e desempenho.</li>
+        <li><strong>Habilidades Interpessoais:</strong> Excelentes habilidades de comunicação e colaboração em ambientes técnicos.</li>
+        <li><strong>Suporte Operacional de Rede:</strong> Experiência como parte da equipe de operações de rede.</li>
+        <li><strong>Resolução de Incidentes:</strong> Capacidade de resolver incidentes, problemas e solicitações de usuários relacionados à rede.</li>
+        <li><strong>Instalações e Upgrades:</strong> Realização de novas instalações e upgrades de dispositivos de rede.</li>
+        <li><strong>Tarefas Preventivas:</strong> Execução de tarefas preventivas de rede, incluindo janelas de manutenção.</li>
+        <li><strong>Documentação:</strong> Criação e manutenção de procedimentos e documentações relacionadas à rede.</li>
+        <li><strong>Monitoramento de Rede:</strong> Revisão de logs e alertas de equipamentos de rede e execução de ações corretivas.</li>
+        <li><strong>Suporte Técnico:</strong> Preparação e atualização de documentações técnicas e templates de configuração quando necessário.</li>
+        <li><strong>Disponibilidade:</strong> Fornecimento de suporte telefônico de plantão fora do horário comercial, quando requerido.</li>
+    </ul>
 </section>
 
 <section id="habilidades" class="skills">
@@ -203,33 +255,58 @@
             <li>Virtualização com VMware e Hyper-V</li>
             <li>Segurança de rede e protocolos</li>
             <li>Resolução de problemas e suporte técnico</li>
+            <li>Gerenciamento de Usuários e Grupos no Active Directory</li>
+            <li>Configuração de VLANs entre Switches</li>
+            <li>Implantação de sistemas WMS</li>
         </ul>
     </div>
 </section>
 
 <section id="experiencia" class="experience">
     <h2>Experiência Profissional</h2>
-   
-   
+
+    <!-- Experiência Atual -->
     <div class="card">
         <img src="mundial_logo.png" alt="Logo da Mundial S.A. Oficial">
         <div>
-            <h3>Analista de Infraestrutura Jr - Mundial S.A. Oficial</h3>
-            <p><em>Tempo integral · 2 Anos</em></p>
-            <p><em>Gravataí - RS· Híbrida</em></p>
-            <p>Atuei na empresa Mundial S.A. Oficial, onde contribuí para projetos de infraestrutura híbrida, otimizando processos e implementando soluções inovadoras.</p>
+            <h3>Analista de Suporte Júnior TI - Mundial S.A. Oficial</h3>
+            <p><em>Outubro de 2022 - Presente · 2 anos 1 mês</em></p>
+            <p><em>Gravataí, RS · Híbrida</em></p>
+            <ul>
+                <li>Trabalhando na filial do Rio Grande do Sul da Mundial S.A.</li>
+                <li>Configuração de VLANs entre switches.</li>
+                <li>Controle de compartilhamento em Windows Server 2008 a 2022.</li>
+                <li>Gerenciamento de usuários e grupos no Active Directory.</li>
+                <li>Campanhas de Segurança da Informação.</li>
+            </ul>
         </div>
     </div>
-    
-    
-    <div class="card">
-        <h3>Assistente de Infraestrutura - Mundial S.A. Oficial</h3>
-            <p><em>Tempo integral · 3 Anos </em></p>
-            <p><em>Extrema - MG· Híbrida</em></p>
-            <p>Atuei na empresa Mundial S.A. Oficial, onde contribuí para projetos de infraestrutura híbrida, otimizando processos e implementando soluções inovadoras.</p>
-    </div>
-   
 
+    <!-- Experiência Anterior -->
+    <div class="card">
+        <img src="mundial_logo.png" alt="Logo da Mundial S.A. Oficial">
+        <div>
+            <h3>Assistente de Suporte de TI - Mundial S.A. Oficial</h3>
+            <p><em>Junho de 2019 - Setembro de 2022 · 3 anos 3 meses</em></p>
+            <p><em>Extrema, MG</em></p>
+            <ul>
+                <li>Trabalhei na filial de Extrema, MG da Mundial S.A.</li>
+                <li>Instalação de cabeamento de infraestrutura de rede.</li>
+                <li>Atendimento ao usuário de primeiro nível.</li>
+                <li>Resolução de problemas básicos no Active Directory.</li>
+                <li>Participação na implantação do sistema WMS para equipamentos de coletores e impressoras de etiquetas.</li>
+                <li>Atendimento básico a impressoras de etiquetas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Experiência Anterior -->
+    <div class="card">
+        <h3>Analista de Infraestrutura Sênior - Empresa XYZ</h3>
+        <p><em>2015 - 2019 · 4 anos</em></p>
+        <p><em>Localização</em></p>
+        <p>Responsável pela manutenção e otimização da infraestrutura de rede, implementando soluções que aumentaram a eficiência em 20%.</p>
+    </div>
 </section>
 
 <section id="educacao" class="education">
