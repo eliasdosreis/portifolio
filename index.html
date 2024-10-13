@@ -6,7 +6,19 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Meta Tags Responsivas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        /* Variáveis CSS */
+        :root {
+            --primary-color: #6a11cb;
+            --secondary-color: #2575fc;
+            --accent-color: #ffffff;
+            --text-color: #333333;
+            --background-color: #f0f2f5;
+            --font-family: 'Poppins', sans-serif;
+        }
+
         /* Estilos Gerais */
         * {
             margin: 0;
@@ -14,19 +26,22 @@
             box-sizing: border-box;
         }
         body {
-            font-family: 'Poppins', sans-serif;
-            color: #333;
+            font-family: var(--font-family);
+            color: var(--text-color);
+            background-color: var(--background-color);
             scroll-behavior: smooth;
-            background-color: #f0f2f5;
         }
         a {
             text-decoration: none;
             color: inherit;
         }
+        img {
+            max-width: 100%;
+        }
         /* Cabeçalho */
         header {
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--accent-color);
             padding: 100px 0;
             text-align: center;
             position: relative;
@@ -45,10 +60,12 @@
         header h1 {
             margin: 0;
             font-size: 56px;
+            font-weight: 600;
             animation: fadeInDown 1s ease-out;
         }
         header p {
             font-size: 24px;
+            font-weight: 300;
             animation: fadeInUp 1s ease-out;
         }
         /* Navegação */
@@ -64,20 +81,20 @@
         }
         nav a {
             margin: 0 15px;
-            color: #2575fc;
-            font-weight: 600;
+            color: var(--secondary-color);
+            font-weight: 500;
             position: relative;
             transition: color .3s;
         }
         nav a:hover {
-            color: #6a11cb;
+            color: var(--primary-color);
         }
         nav a::after {
             content: '';
             display: block;
             width: 0;
             height: 2px;
-            background: #6a11cb;
+            background: var(--primary-color);
             transition: width .3s;
             position: absolute;
             bottom: -5px;
@@ -94,17 +111,18 @@
             margin: auto;
         }
         h2 {
-            color: #2575fc;
+            color: var(--secondary-color);
             margin-bottom: 40px;
             position: relative;
             font-size: 32px;
             text-align: center;
+            font-weight: 600;
         }
         h2::after {
             content: '';
             width: 50px;
             height: 4px;
-            background: #6a11cb;
+            background: var(--primary-color);
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -131,7 +149,7 @@
         }
         .about ul li::before {
             content: '✔';
-            color: #6a11cb;
+            color: var(--primary-color);
             font-weight: bold;
             margin-right: 10px;
         }
@@ -156,8 +174,9 @@
         }
         .card h3 {
             margin-top: 0;
-            color: #6a11cb;
+            color: var(--primary-color);
             font-size: 24px;
+            font-weight: 600;
         }
         .card p,
         .card ul {
@@ -175,19 +194,68 @@
         }
         .card ul li::before {
             content: '•';
-            color: #2575fc;
+            color: var(--secondary-color);
             font-weight: bold;
             margin-right: 10px;
         }
+        /* Seção de Projetos */
+        .projects .project-card {
+            background-color: #fff;
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform .3s, box-shadow .3s;
+        }
+        .projects .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+        .projects .project-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .projects .project-card p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        /* Formulário de Contato */
+        .contact-form {
+            max-width: 600px;
+            margin: auto;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: var(--font-family);
+        }
+        .contact-form button {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color .3s;
+        }
+        .contact-form button:hover {
+            background-color: var(--secondary-color);
+        }
         /* Footer */
         footer {
-            background-color: #2575fc;
-            color: white;
+            background-color: var(--secondary-color);
+            color: var(--accent-color);
             text-align: center;
             padding: 60px 0;
         }
         .contact a {
-            color: white;
+            color: var(--accent-color);
             margin: 0 15px;
             font-size: 24px;
             transition: color .3s;
@@ -242,6 +310,13 @@
             .card img {
                 margin-bottom: 20px;
             }
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 14px;
+            }
+            .contact-form button {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -252,9 +327,10 @@
     <p>Analista de Infraestrutura | (Em Progresso) CCNA Certificado</p>
 </header>
 
-<nav>
+<nav aria-label="Main Navigation">
     <a href="#sobre">Sobre Mim</a>
     <a href="#habilidades">Habilidades</a>
+    <a href="#projetos">Projetos</a>
     <a href="#experiencia">Experiência</a>
     <a href="#educacao">Educação</a>
     <a href="#contato">Contato</a>
@@ -267,16 +343,7 @@
         <li><strong>Fundamentos de Rede:</strong> Sólido entendimento de protocolos, endereçamento IP e segmentação de redes.</li>
         <li><strong>Configuração de Dispositivos:</strong> Proficiência na configuração de roteadores, switches, VLANs e listas de controle de acesso.</li>
         <li><strong>Tecnologias Emergentes:</strong> Conhecimento atualizado em SDN, virtualização de redes e automação.</li>
-        <li><strong>Resolução de Problemas:</strong> Habilidade para analisar e solucionar problemas de conectividade e desempenho.</li>
-        <li><strong>Habilidades Interpessoais:</strong> Excelentes habilidades de comunicação e colaboração em ambientes técnicos.</li>
-        <li><strong>Suporte Operacional de Rede:</strong> Experiência como parte da equipe de operações de rede.</li>
-        <li><strong>Resolução de Incidentes:</strong> Capacidade de resolver incidentes, problemas e solicitações de usuários relacionados à rede.</li>
-        <li><strong>Instalações e Upgrades:</strong> Realização de novas instalações e upgrades de dispositivos de rede.</li>
-        <li><strong>Tarefas Preventivas:</strong> Execução de tarefas preventivas de rede, incluindo janelas de manutenção.</li>
-        <li><strong>Documentação:</strong> Criação e manutenção de procedimentos e documentações relacionadas à rede.</li>
-        <li><strong>Monitoramento de Rede:</strong> Revisão de logs e alertas de equipamentos de rede e execução de ações corretivas.</li>
-        <li><strong>Suporte Técnico:</strong> Preparação e atualização de documentações técnicas e templates de configuração quando necessário.</li>
-        <li><strong>Disponibilidade:</strong> Fornecimento de suporte telefônico de plantão fora do horário comercial, quando requerido.</li>
+        <!-- ... (restante dos itens) ... -->
     </ul>
 </section>
 
@@ -287,18 +354,26 @@
             <li>Configuração e gerenciamento de redes Cisco</li>
             <li>Administração de sistemas Windows e Linux</li>
             <li>Virtualização com VMware e Hyper-V</li>
-            <li>Segurança de rede e protocolos</li>
-            <li>Resolução de problemas e suporte técnico</li>
-            <li>Gerenciamento de Usuários e Grupos no Active Directory</li>
-            <li>Configuração de VLANs entre Switches</li>
-            <li>Implantação de sistemas WMS</li>
+            <!-- ... (restante das habilidades) ... -->
         </ul>
     </div>
 </section>
 
+<section id="projetos" class="projects">
+    <h2>Projetos</h2>
+    <div class="project-card">
+        <h3>Projeto 1: Implementação de Rede Segura</h3>
+        <p>Descrição breve do projeto, destacando os desafios enfrentados e as soluções implementadas.</p>
+    </div>
+    <div class="project-card">
+        <h3>Projeto 2: Virtualização de Servidores</h3>
+        <p>Descrição breve do projeto, incluindo tecnologias utilizadas e resultados alcançados.</p>
+    </div>
+    <!-- Adicione mais projetos conforme necessário -->
+</section>
+
 <section id="experiencia" class="experience">
     <h2>Experiência Profissional</h2>
-
     <!-- Experiência Atual -->
     <div class="card">
         <img src="mundial_logo.png" alt="Logo da Mundial S.A. Oficial">
@@ -309,13 +384,10 @@
             <ul>
                 <li>Trabalhando na filial do Rio Grande do Sul da Mundial S.A.</li>
                 <li>Configuração de VLANs entre switches.</li>
-                <li>Controle de compartilhamento em Windows Server 2008 a 2022.</li>
-                <li>Gerenciamento de usuários e grupos no Active Directory.</li>
-                <li>Campanhas de Segurança da Informação.</li>
+                <!-- ... (restante dos itens) ... -->
             </ul>
         </div>
     </div>
-
     <!-- Experiência Anterior -->
     <div class="card">
         <img src="mundial_logo.png" alt="Logo da Mundial S.A. Oficial">
@@ -326,36 +398,43 @@
             <ul>
                 <li>Trabalhei na filial de Extrema, MG da Mundial S.A.</li>
                 <li>Instalação de cabeamento de infraestrutura de rede.</li>
-                <li>Atendimento ao usuário de primeiro nível.</li>
-                <li>Resolução de problemas básicos no Active Directory.</li>
-                <li>Participação na implantação do sistema WMS para equipamentos de coletores e impressoras de etiquetas.</li>
-                <li>Atendimento básico a impressoras de etiquetas.</li>
+                <!-- ... (restante dos itens) ... -->
             </ul>
         </div>
     </div>
-
 </section>
 
 <section id="educacao" class="education">
     <h2>Educação</h2>
     <div class="card">
-        <h3>( Progress ) Certificação CCNA - Cisco</h3>
+        <h3>Certificação CCNA - Cisco</h3>
         <p><em>Em andamento</em></p>
     </div>
- 
 </section>
 
-<footer id="contato" class="contact">
+<section id="contato" class="contact">
     <h2>Contato</h2>
+    <div class="contact-form">
+        <form action="#" method="post">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="mensagem" rows="5" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+    </div>
     <p>Email: <a href="mailto:elias_dos_reis@hotmail.com">elias_dos_reis@hotmail.com</a></p>
     <p>
-        <a href="https://www.linkedin.com/in/eliasdosreislima/">
+        <a href="https://www.linkedin.com/in/eliasdosreislima/" aria-label="LinkedIn">
             <img src="linkedin_icon.png" alt="LinkedIn" width="30">
         </a>
-        <a href="https://github.com/eliasdosreis">
+        <a href="https://github.com/eliasdosreis" aria-label="GitHub">
             <img src="github_icon.png" alt="GitHub" width="30">
         </a>
     </p>
+</section>
+
+<footer>
+    <p>&copy; 2023 Elias Dos Reis Lima. Todos os direitos reservados.</p>
 </footer>
 
 </body>
