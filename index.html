@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfólio - Elias Dos Reis Lima</title>
+    <style>
+        /* Estilos Gerais */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            scroll-behavior: smooth;
+            background-color: #f0f2f5;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header::after {
+            content: '';
+            background: url('wave.svg') no-repeat bottom;
+            background-size: cover;
+            width: 100%;
+            height: 100px;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 56px;
+            animation: fadeInDown 1s ease-out;
+        }
+        header p {
+            font-size: 24px;
+            animation: fadeInUp 1s ease-out;
+        }
+        /* Navegação */
+        nav {
+            background-color: white;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #0d6efd;
+            font-weight: bold;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #0d6efd;
+            transition: width .3s;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        /* Seções */
+        section {
+            padding: 60px 10%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h2 {
+            color: #0d6efd;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 4px;
+            background: #0d6efd;
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+        }
+        /* Cartões */
+        .card {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform .3s;
+            display: flex;
+            align-items: center;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card img {
+            max-width: 100px;
+            margin-right: 30px;
+        }
+        /* Footer */
+        footer {
+            background-color: #0d6efd;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+        .contact a {
+            color: white;
+            margin: 0 10px;
+            transition: color .3s;
+        }
+        .contact a:hover {
+            color: #d1e9ff;
+        }
+        /* Animações */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 36px;
+            }
+            header p {
+                font-size: 18px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            section {
+                padding: 60px 5%;
+            }
+            .card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .card img {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Elias Dos Reis Lima</h1>
+    <p>Analista de Infraestrutura | CCNA Certificado</p>
+</header>
+
+<nav>
+    <a href="#sobre">Sobre Mim</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#experiencia">Experiência</a>
+    <a href="#educacao">Educação</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Sou um analista de infraestrutura dedicado com ampla experiência em redes e sistemas. Com certificação CCNA, tenho habilidades comprovadas em configuração e manutenção de equipamentos Cisco, garantindo o funcionamento otimizado das redes corporativas.</p>
+</section>
+
+<section id="habilidades" class="skills">
+    <h2>Habilidades</h2>
+    <div class="card">
+        <ul>
+            <li>Configuração e gerenciamento de redes Cisco</li>
+            <li>Administração de sistemas Windows e Linux</li>
+            <li>Virtualização com VMware e Hyper-V</li>
+            <li>Segurança de rede e protocolos</li>
+            <li>Resolução de problemas e suporte técnico</li>
+        </ul>
+    </div>
+</section>
+
+<section id="experiencia" class="experience">
+    <h2>Experiência Profissional</h2>
+   
+   
+    <div class="card">
+        <img src="mundial_logo.png" alt="Logo da Mundial S.A. Oficial">
+        <div>
+            <h3>Analista de Infraestrutura Jr - Mundial S.A. Oficial</h3>
+            <p><em>Tempo integral · 2 Anos</em></p>
+            <p><em>Gravataí - RS· Híbrida</em></p>
+            <p>Atuei na empresa Mundial S.A. Oficial, onde contribuí para projetos de infraestrutura híbrida, otimizando processos e implementando soluções inovadoras.</p>
+        </div>
+    </div>
+    
+    
+    <div class="card">
+        <h3>Assistente de Infraestrutura - Mundial S.A. Oficial</h3>
+            <p><em>Tempo integral · 3 Anos </em></p>
+            <p><em>Extrema - MG· Híbrida</em></p>
+            <p>Atuei na empresa Mundial S.A. Oficial, onde contribuí para projetos de infraestrutura híbrida, otimizando processos e implementando soluções inovadoras.</p>
+    </div>
+   
+
+</section>
+
+<section id="educacao" class="education">
+    <h2>Educação</h2>
+    <div class="card">
+        <h3>Certificação CCNA - Cisco</h3>
+        <p><em>2015</em></p>
+    </div>
+    <div class="card">
+        <h3>Bacharel em Ciência da Computação - Universidade Federal</h3>
+        <p><em>2011 - 2015</em></p>
+    </div>
+</section>
+
+<footer id="contato" class="contact">
+    <h2>Contato</h2>
+    <p>Email: <a href="mailto:elias.lima@example.com">elias.lima@example.com</a></p>
+    <p>Telefone: (11) 91234-5678</p>
+    <p>
+        <a href="#">LinkedIn</a> | 
+        <a href="#">GitHub</a>
+    </p>
+</footer>
+
+</body>
+</html>
