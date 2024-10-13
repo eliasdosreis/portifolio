@@ -36,6 +36,7 @@
             color: var(--text-color);
             background-color: var(--background-color);
             perspective: 1000px;
+            font-size: 18px; /* Aumentado para melhorar a legibilidade */
         }
         a {
             text-decoration: none;
@@ -53,6 +54,13 @@
             position: relative;
             overflow: hidden;
             transform-style: preserve-3d;
+        }
+        header h1 {
+            font-size: 48px; /* Aumentado */
+        }
+        header p {
+            font-size: 24px; /* Aumentado */
+            margin-top: 10px;
         }
         header h1, header p {
             position: relative;
@@ -79,32 +87,56 @@
         }
         /* Navegação */
         nav {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: transparent;
             padding: 15px;
             text-align: center;
             position: sticky;
             top: 0;
+            transition: background-color 0.3s ease, transform 0.3s ease;
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             z-index: 1000;
             transform-style: preserve-3d;
         }
+        nav.scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        nav.hidden {
+            transform: translateY(-100%);
+        }
         nav a {
             margin: 0 15px;
-            color: var(--secondary-color);
+            color: var(--text-color);
             font-weight: 500;
             position: relative;
             transition: color .3s, transform .3s;
             display: inline-block;
+            padding: 5px 0;
+            font-size: 18px; /* Aumentado */
+        }
+        nav:not(.scrolled) a {
+            color: var(--accent-color);
+        }
+        nav a::after {
+            content: '';
+            display: block;
+            width: 0%;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width .3s;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        nav a:hover::after {
+            width: 100%;
         }
         nav a:hover {
-            color: var(--primary-color);
             transform: translateZ(10px);
         }
         /* Seções */
         section {
-            padding: 80px 10%;
-            max-width: 1200px;
+            padding: 80px 5%; /* Ajustado para ocupar 100% da largura */
             margin: auto;
             position: relative;
             z-index: 1;
@@ -114,7 +146,7 @@
             color: var(--secondary-color);
             margin-bottom: 40px;
             position: relative;
-            font-size: 32px;
+            font-size: 36px; /* Aumentado */
             text-align: center;
             font-weight: 600;
             transform: translateZ(20px);
@@ -131,7 +163,7 @@
         }
         /* Sobre Mim */
         .about p {
-            font-size: 18px;
+            font-size: 20px; /* Aumentado */
             line-height: 1.8;
             margin-bottom: 40px;
             text-align: center;
@@ -140,13 +172,12 @@
         .about ul {
             list-style: none;
             padding: 0;
-            max-width: 800px;
             margin: auto;
             transform: translateZ(0);
         }
         .about ul li {
             margin-bottom: 15px;
-            font-size: 18px;
+            font-size: 20px; /* Aumentado */
             display: flex;
             align-items: center;
         }
@@ -176,7 +207,7 @@
             box-shadow: 0 12px 24px rgba(0,0,0,0.2);
         }
         .card img {
-            max-width: 100px;
+            max-width: 120px; /* Aumentado */
             margin-right: 30px;
             z-index: 1;
             transition: transform .6s;
@@ -185,7 +216,7 @@
         .card h3 {
             margin-top: 0;
             color: var(--primary-color);
-            font-size: 24px;
+            font-size: 28px; /* Aumentado */
             font-weight: 600;
             z-index: 1;
             transform: translateZ(40px);
@@ -193,7 +224,7 @@
         }
         .card p,
         .card ul {
-            font-size: 16px;
+            font-size: 18px; /* Aumentado */
             line-height: 1.6;
             z-index: 1;
             transform: translateZ(30px);
@@ -236,11 +267,12 @@
             margin-bottom: 15px;
             position: relative;
             z-index: 1;
+            font-size: 28px; /* Aumentado */
             transform: translateZ(40px);
             transition: transform .6s;
         }
         .projects .project-card p {
-            font-size: 16px;
+            font-size: 18px; /* Aumentado */
             line-height: 1.6;
             position: relative;
             z-index: 1;
@@ -249,18 +281,18 @@
         }
         /* Formulário de Contato */
         .contact-form {
-            max-width: 600px;
+            max-width: 800px; /* Aumentado */
             margin: auto;
             transform-style: preserve-3d;
         }
         .contact-form input,
         .contact-form textarea {
             width: 100%;
-            padding: 15px;
+            padding: 20px; /* Aumentado */
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 18px; /* Aumentado */
             font-family: var(--font-family);
             transition: border-color .3s;
             transform: translateZ(20px);
@@ -276,7 +308,7 @@
             padding: 15px 30px;
             border: none;
             border-radius: 10px;
-            font-size: 18px;
+            font-size: 20px; /* Aumentado */
             cursor: pointer;
             transition: background-color .3s, transform .3s;
             transform: translateZ(20px);
@@ -294,12 +326,13 @@
         }
         footer p {
             margin-bottom: 20px;
+            font-size: 18px; /* Aumentado */
             transform: translateZ(10px);
         }
         .social-icons a {
             color: var(--accent-color);
             margin: 0 15px;
-            font-size: 24px;
+            font-size: 28px; /* Aumentado */
             transition: color .3s, transform .3s;
             transform: translateZ(20px);
         }
@@ -319,13 +352,17 @@
                 font-size: 36px;
             }
             header p {
-                font-size: 18px;
+                font-size: 20px;
             }
             nav a {
                 margin: 0 10px;
+                font-size: 16px;
             }
             section {
                 padding: 60px 5%;
+            }
+            h2 {
+                font-size: 30px;
             }
             .card {
                 flex-direction: column;
@@ -337,10 +374,11 @@
             }
             .contact-form input,
             .contact-form textarea {
-                font-size: 14px;
+                font-size: 16px;
+                padding: 15px;
             }
             .contact-form button {
-                font-size: 16px;
+                font-size: 18px;
             }
         }
     </style>
@@ -364,6 +402,7 @@
     <a href="#contato">Contato</a>
 </nav>
 
+<!-- Seção Sobre Mim -->
 <section id="sobre" class="about" data-aos="fade-up" data-aos-once="false">
     <h2>Sobre Mim</h2>
     <p data-aos="fade-in" data-aos-duration="1000">👉 Olá e bem-vindo ao meu perfil! Sou um entusiasta de tecnologia com um histórico comprovado de entregar resultados. Minha jornada até agora tem sido guiada por uma busca contínua pela excelência e um desejo de fazer uma diferença significativa.</p>
@@ -375,6 +414,7 @@
     </ul>
 </section>
 
+<!-- Seção Habilidades -->
 <section id="habilidades" class="skills" data-aos="fade-up" data-aos-once="false">
     <h2>Habilidades</h2>
     <div class="card">
@@ -387,6 +427,7 @@
     </div>
 </section>
 
+<!-- Seção Projetos -->
 <section id="projetos" class="projects" data-aos="fade-up" data-aos-once="false">
     <h2>Projetos</h2>
     <div class="project-card" data-aos="flip-left" data-aos-duration="800">
@@ -400,6 +441,7 @@
     <!-- Adicione mais projetos conforme necessário -->
 </section>
 
+<!-- Seção Experiência -->
 <section id="experiencia" class="experience" data-aos="fade-up" data-aos-once="false">
     <h2>Experiência Profissional</h2>
     <!-- Experiência Atual -->
@@ -432,6 +474,7 @@
     </div>
 </section>
 
+<!-- Seção Educação -->
 <section id="educacao" class="education" data-aos="fade-up" data-aos-once="false">
     <h2>Educação</h2>
     <div class="card" data-aos="zoom-in" data-aos-duration="800">
@@ -440,6 +483,7 @@
     </div>
 </section>
 
+<!-- Seção Contato -->
 <section id="contato" class="contact" data-aos="fade-up" data-aos-once="false">
     <h2>Contato</h2>
     <div class="contact-form" data-aos="flip-up" data-aos-duration="800">
@@ -500,6 +544,32 @@
                 "width": 1
             }
         }
+    });
+
+    /* Efeitos na Barra de Navegação */
+    const nav = document.querySelector('nav');
+    const header = document.querySelector('header');
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Alterar cor da barra de navegação ao rolar
+        if (scrollTop > header.offsetHeight - nav.offsetHeight) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+
+        // Ocultar/Exibir barra de navegação com base na direção da rolagem
+        if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
+            // Rolando para baixo
+            nav.classList.add('hidden');
+        } else {
+            // Rolando para cima
+            nav.classList.remove('hidden');
+        }
+        lastScrollTop = scrollTop;
     });
 </script>
 </body>
