@@ -222,9 +222,8 @@
             transform: translateZ(40px);
             transition: transform .6s;
         }
-        .card p,
-        .card ul {
-            font-size: 18px; /* Aumentado */
+        .card p {
+            font-size: 20px; /* Aumentado */
             line-height: 1.6;
             z-index: 1;
             transform: translateZ(30px);
@@ -233,6 +232,11 @@
         .card ul {
             list-style: none;
             padding: 0;
+            font-size: 20px; /* Aumentado */
+            line-height: 1.6;
+            z-index: 1;
+            transform: translateZ(30px);
+            transition: transform .6s;
         }
         .card ul li {
             margin-bottom: 10px;
@@ -272,7 +276,7 @@
             transition: transform .6s;
         }
         .projects .project-card p {
-            font-size: 18px; /* Aumentado */
+            font-size: 20px; /* Aumentado */
             line-height: 1.6;
             position: relative;
             z-index: 1;
@@ -364,13 +368,16 @@
             h2 {
                 font-size: 30px;
             }
-            .card {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
+            .about p,
+            .about ul li,
+            .card p,
+            .card ul,
+            .projects .project-card p {
+                font-size: 18px;
             }
-            .card img {
-                margin-bottom: 20px;
+            .card h3,
+            .projects .project-card h3 {
+                font-size: 24px;
             }
             .contact-form input,
             .contact-form textarea {
@@ -419,9 +426,9 @@
     <h2>Habilidades</h2>
     <div class="card">
         <ul>
-            <li data-aos="zoom-in" data-aos-duration="800"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>Configuração e gerenciamento de redes Cisco</li>
-            <li data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>Administração de sistemas Windows e Linux</li>
-            <li data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>Virtualização com VMware e Hyper-V</li>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<li data-aos="zoom-in" data-aos-duration="800"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>Configuração e gerenciamento de redes Cisco</li>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<li data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>Administração de sistemas Windows e Linux</li>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <li data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>Virtualização com VMware e Hyper-V</li>
             <!-- ... (restante das habilidades) ... -->
         </ul>
     </div>
@@ -431,12 +438,12 @@
 <section id="projetos" class="projects" data-aos="fade-up" data-aos-once="false">
     <h2>Projetos</h2>
     <div class="project-card" data-aos="flip-left" data-aos-duration="800">
-        <h3>Projeto 1: Implementação de Rede Segura</h3>
-        <p>Descrição breve do projeto, destacando os desafios enfrentados e as soluções implementadas.</p>
+        <h3> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Projeto 1: Implementação de Rede Segura</h3>
+        <p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Descrição breve do projeto, destacando os desafios enfrentados e as soluções implementadas.</p>
     </div>
     <div class="project-card" data-aos="flip-left" data-aos-duration="800" data-aos-delay="100">
-        <h3>Projeto 2: Virtualização de Servidores</h3>
-        <p>Descrição breve do projeto, incluindo tecnologias utilizadas e resultados alcançados.</p>
+        <h3>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Projeto 2: Virtualização de Servidores</h3>
+        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Descrição breve do projeto, incluindo tecnologias utilizadas e resultados alcançados.</p>
     </div>
     <!-- Adicione mais projetos conforme necessário -->
 </section>
@@ -446,7 +453,7 @@
     <h2>Experiência Profissional</h2>
     <!-- Experiência Atual -->
     <div class="card" data-aos="fade-right" data-aos-duration="800">
-        <img src="mundial_logo.png" alt="Logo da Mundial S.A. Oficial">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnmP4rUcqqPdHTjpikPtEKbA7BtfAvMUV1BQ&s" alt="Logo da Mundial S.A. Oficial">
         <div>
             <h3>Analista de Suporte Júnior TI - Mundial S.A. Oficial</h3>
             <p><em>Outubro de 2022 - Presente · 2 anos 1 mês</em></p>
@@ -460,7 +467,7 @@
     </div>
     <!-- Experiência Anterior -->
     <div class="card" data-aos="fade-left" data-aos-duration="800">
-        <img src="mundial_logo.png" alt="Logo da Mundial S.A. Oficial">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnmP4rUcqqPdHTjpikPtEKbA7BtfAvMUV1BQ&s" alt="Logo da Mundial S.A. Oficial">
         <div>
             <h3>Assistente de Suporte de TI - Mundial S.A. Oficial</h3>
             <p><em>Junho de 2019 - Setembro de 2022 · 3 anos 3 meses</em></p>
@@ -478,7 +485,7 @@
 <section id="educacao" class="education" data-aos="fade-up" data-aos-once="false">
     <h2>Educação</h2>
     <div class="card" data-aos="zoom-in" data-aos-duration="800">
-        <h3>Certificação CCNA - Cisco</h3>
+        <h3> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Certificação CCNA - Cisco</h3>
         <p><em>Em andamento</em></p>
     </div>
 </section>
