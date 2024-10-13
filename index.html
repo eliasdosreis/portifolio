@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfólio - Elias Dos Reis Lima</title>
+    <!-- Meta Tags Responsivas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Meta Tags Responsivas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Biblioteca AOS para animações de rolagem -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <style>
         /* Variáveis CSS */
         :root {
@@ -401,10 +403,10 @@
 </head>
 <body>
 
-<!-- Partículas de Fundo -->
-<div id="particles-js"></div>
+<header data-aos="fade-down">
+    <!-- Partículas de Fundo -->
+    <div id="particles-js"></div>
 
-<header>
     <h1>Elias Dos Reis Lima</h1>
     <p>Analista de Infraestrutura | (Em Progresso) CCNA Certificado</p>
 </header>
@@ -418,46 +420,46 @@
     <a href="#contato">Contato</a>
 </nav>
 
-<section id="sobre" class="about">
+<section id="sobre" class="about" data-aos="fade-up">
     <h2>Sobre Mim</h2>
     <p>👉 Olá e bem-vindo ao meu perfil! Sou um entusiasta de tecnologia com um histórico comprovado de entregar resultados. Minha jornada até agora tem sido guiada por uma busca contínua pela excelência e um desejo de fazer uma diferença significativa.</p>
     <ul>
-        <li><strong>Fundamentos de Rede:</strong> Sólido entendimento de protocolos, endereçamento IP e segmentação de redes.</li>
-        <li><strong>Configuração de Dispositivos:</strong> Proficiência na configuração de roteadores, switches, VLANs e listas de controle de acesso.</li>
-        <li><strong>Tecnologias Emergentes:</strong> Conhecimento atualizado em SDN, virtualização de redes e automação.</li>
+        <li data-aos="fade-right"><strong>Fundamentos de Rede:</strong> Sólido entendimento de protocolos, endereçamento IP e segmentação de redes.</li>
+        <li data-aos="fade-right" data-aos-delay="100"><strong>Configuração de Dispositivos:</strong> Proficiência na configuração de roteadores, switches, VLANs e listas de controle de acesso.</li>
+        <li data-aos="fade-right" data-aos-delay="200"><strong>Tecnologias Emergentes:</strong> Conhecimento atualizado em SDN, virtualização de redes e automação.</li>
         <!-- ... (restante dos itens) ... -->
     </ul>
 </section>
 
-<section id="habilidades" class="skills">
+<section id="habilidades" class="skills" data-aos="fade-up">
     <h2>Habilidades</h2>
     <div class="card">
         <ul>
-            <li>Configuração e gerenciamento de redes Cisco</li>
-            <li>Administração de sistemas Windows e Linux</li>
-            <li>Virtualização com VMware e Hyper-V</li>
+            <li data-aos="zoom-in"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>Configuração e gerenciamento de redes Cisco</li>
+            <li data-aos="zoom-in" data-aos-delay="100"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>Administração de sistemas Windows e Linux</li>
+            <li data-aos="zoom-in" data-aos-delay="200"><i class="fas fa-check-circle" style="color: var(--primary-color); margin-right: 10px;"></i>Virtualização com VMware e Hyper-V</li>
             <!-- ... (restante das habilidades) ... -->
         </ul>
     </div>
 </section>
 
-<section id="projetos" class="projects">
+<section id="projetos" class="projects" data-aos="fade-up">
     <h2>Projetos</h2>
-    <div class="project-card">
+    <div class="project-card" data-aos="flip-left">
         <h3>Projeto 1: Implementação de Rede Segura</h3>
         <p>Descrição breve do projeto, destacando os desafios enfrentados e as soluções implementadas.</p>
     </div>
-    <div class="project-card">
+    <div class="project-card" data-aos="flip-left" data-aos-delay="100">
         <h3>Projeto 2: Virtualização de Servidores</h3>
         <p>Descrição breve do projeto, incluindo tecnologias utilizadas e resultados alcançados.</p>
     </div>
     <!-- Adicione mais projetos conforme necessário -->
 </section>
 
-<section id="experiencia" class="experience">
+<section id="experiencia" class="experience" data-aos="fade-up">
     <h2>Experiência Profissional</h2>
     <!-- Experiência Atual -->
-    <div class="card">
+    <div class="card" data-aos="fade-right">
         <img src="mundial_logo.png" alt="Logo da Mundial S.A. Oficial">
         <div>
             <h3>Analista de Suporte Júnior TI - Mundial S.A. Oficial</h3>
@@ -471,7 +473,7 @@
         </div>
     </div>
     <!-- Experiência Anterior -->
-    <div class="card">
+    <div class="card" data-aos="fade-left">
         <img src="mundial_logo.png" alt="Logo da Mundial S.A. Oficial">
         <div>
             <h3>Assistente de Suporte de TI - Mundial S.A. Oficial</h3>
@@ -486,17 +488,17 @@
     </div>
 </section>
 
-<section id="educacao" class="education">
+<section id="educacao" class="education" data-aos="fade-up">
     <h2>Educação</h2>
-    <div class="card">
+    <div class="card" data-aos="zoom-in">
         <h3>Certificação CCNA - Cisco</h3>
         <p><em>Em andamento</em></p>
     </div>
 </section>
 
-<section id="contato" class="contact">
+<section id="contato" class="contact" data-aos="fade-up">
     <h2>Contato</h2>
-    <div class="contact-form">
+    <div class="contact-form" data-aos="flip-up">
         <form action="#" method="post">
             <input type="text" name="nome" placeholder="Seu Nome" required>
             <input type="email" name="email" placeholder="Seu Email" required>
@@ -505,7 +507,7 @@
         </form>
     </div>
     <p>Email: <a href="mailto:elias_dos_reis@hotmail.com">elias_dos_reis@hotmail.com</a></p>
-    <div class="social-icons">
+    <div class="social-icons" data-aos="fade-up">
         <a href="https://www.linkedin.com/in/eliasdosreislima/" aria-label="LinkedIn">
             <i class="fab fa-linkedin"></i>
         </a>
@@ -521,8 +523,16 @@
 
 <!-- Particles.js Script -->
 <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<!-- AOS Script para animações de rolagem -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
-    /* ParticlesJS Config */
+    /* Inicialização do AOS */
+    AOS.init({
+        duration: 1000,
+        once: true,
+    });
+
+    /* Configuração do ParticlesJS */
     particlesJS('particles-js',
     {
         "particles": {
